@@ -5,14 +5,56 @@ export default class Test extends Component {
         super()
         this.state={
             name:'Shibansh Sahoo',
-            data:''
+            data:'',
+            data1:''
         }
-        // this.a = this.a.bind(this)
+        this.a = this.a.bind(this)
+        this.b = this.b.bind(this)
+
     }
 
 
 
-    async componentDidMount(){
+    // async componentDidMount(){
+    //     //  setTimeout(() => {
+    //     //     document.querySelector('.test').style.background='pink'
+    //     //   }, 3000);
+    //     //   return () => clearTimeout(timer);
+
+    //     setTimeout( async () => {
+            
+        
+    //         const url = "https://catfact.ninja/fact"
+    //         const response = await fetch(url)
+    //         const data = await response.json()
+    //         const item = data
+    //         // console.log(item)
+
+    //         this.setState({ 
+    //             data:item
+    //         })
+    //         console.log('this is ok '+this.state.data)
+    //     // timer;
+    // }, 3000);
+    // }
+
+
+
+    async a(){
+        setTimeout(async() => {
+            const url = 'https://www.boredapi.com/api/activity'
+            const response = await fetch(url)
+            const data = await response.json()
+            const i = data
+
+            console.log(i)
+            this.setState({
+                data1:i
+            })
+        }, 2000);
+    }
+
+    async b(){
         //  setTimeout(() => {
         //     document.querySelector('.test').style.background='pink'
         //   }, 3000);
@@ -32,7 +74,12 @@ export default class Test extends Component {
             })
             console.log('this is ok '+this.state.data)
         // timer;
-    }, 5000);
+    }, 3000);
+    }
+
+    componentDidMount(){
+        this.a()
+        this.b()
     }
     // setTimeout(a,2000)
     // async componentDidMount(e){
@@ -54,7 +101,9 @@ export default class Test extends Component {
                 <h1 
                 style={{color:'violet',
                 textDecoration:'underline'}}>
-                    {this.state.data.fact}
+                    {this.state.data.fact}<br></br><br></br>
+
+                    {this.state.data1.activity}
                 </h1>
             </div>
         )
