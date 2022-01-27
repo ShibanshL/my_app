@@ -9,7 +9,7 @@ export default class Test extends Component {
             data1:''
         }
         this.a = this.a.bind(this)
-        this.b = this.b.bind(this)
+        // this.b = this.b.bind(this)
 
     }
 
@@ -52,9 +52,9 @@ export default class Test extends Component {
                 data1:i
             })
         }, 2000);
-    }
+    // }
 
-    async b(){
+    // async b(){
         //  setTimeout(() => {
         //     document.querySelector('.test').style.background='pink'
         //   }, 3000);
@@ -79,7 +79,7 @@ export default class Test extends Component {
 
     componentDidMount(){
         this.a()
-        this.b()
+        // this.b()
     }
     // setTimeout(a,2000)
     // async componentDidMount(e){
