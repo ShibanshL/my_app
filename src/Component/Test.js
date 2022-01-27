@@ -7,14 +7,18 @@ export default class Test extends Component {
             name:'Shibansh Sahoo',
             data:''
         }
-        this.a = this.a.bind(this)
+        // this.a = this.a.bind(this)
     }
 
 
 
-    a(){
-        document.querySelector('.test').style.background='pink'
-        
+    componentDidMount(){
+         setTimeout(() => {
+            document.querySelector('.test').style.background='pink'
+          }, 3000);
+        //   return () => clearTimeout(timer);
+       
+        // timer;
     }
     // setTimeout(a,2000)
     // async componentDidMount(e){
