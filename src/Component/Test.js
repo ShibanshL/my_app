@@ -12,13 +12,27 @@ export default class Test extends Component {
 
 
 
-    componentDidMount(){
-         setTimeout(() => {
-            document.querySelector('.test').style.background='pink'
-          }, 3000);
+    async componentDidMount(){
+        //  setTimeout(() => {
+        //     document.querySelector('.test').style.background='pink'
+        //   }, 3000);
         //   return () => clearTimeout(timer);
-       
+
+        setTimeout( async () => {
+            
+        
+            const url = "https://catfact.ninja/fact"
+            const response = await fetch(url)
+            const data = await response.json()
+            const item = data
+            // console.log(item)
+
+            this.setState({ 
+                data:item
+            })
+            console.log('this is ok '+this.state.data)
         // timer;
+    }, 5000);
     }
     // setTimeout(a,2000)
     // async componentDidMount(e){
@@ -40,7 +54,7 @@ export default class Test extends Component {
                 <h1 
                 style={{color:'violet',
                 textDecoration:'underline'}}>
-                    {/* {this.state.data.fact} */}
+                    {this.state.data.fact}
                 </h1>
             </div>
         )
