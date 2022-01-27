@@ -103,7 +103,10 @@ export default class Test extends Component {
                 textDecoration:'underline'}}>
                     {this.state.data.fact}<br></br><br></br>
 
-                    {this.state.data1.activity}
+                    <span style={{color:'blue',
+                                textDecoration:'underline'}}>
+                        {this.state.data1.activity}
+                    </span>
                 </h1>
             </div>
         )
