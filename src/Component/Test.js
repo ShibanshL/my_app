@@ -11,6 +11,7 @@ export default class Test extends Component {
         }
         this.a = this.a.bind(this)
         // this.b = this.b.bind(this)
+        this.c = this.c.bind(this)
 
     }
 
@@ -82,6 +83,12 @@ export default class Test extends Component {
         this.a()
         // this.b()
     }
+
+    c(){
+        setTimeout(() => {
+            <Ntest/>
+        },2000);
+    }
     // setTimeout(a,2000)
     // async componentDidMount(e){
     //     const response= await fetch('https://catfact.ninja/fact')
@@ -109,6 +116,7 @@ export default class Test extends Component {
                         {this.state.data1.activity}
                     </span>
                 </h1>
+                {this.c()}
               <Ntest / >
             </div>
         )
