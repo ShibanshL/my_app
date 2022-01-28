@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 // import a from './Ani'
+import Ntest from './Ntest'
 export default class Test extends Component {
     constructor(){
         super()
@@ -108,6 +109,7 @@ export default class Test extends Component {
                         {this.state.data1.activity}
                     </span>
                 </h1>
+              <Ntest / >
             </div>
         )
     }
