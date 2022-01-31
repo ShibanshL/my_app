@@ -53,7 +53,7 @@ export default function New(props) {
         <h1>{ndata}</h1>
       
 
-        <Info />
+        <Info name='Whomi' data = {data} />
         {/* {setTimeout(()=>{
             return(
                 <Info />
