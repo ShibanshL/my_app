@@ -23,7 +23,7 @@ export default function New(props) {
         <div className='H3'>
             <h1>{props.name}</h1>
         </div> */}
-        {j}
+        {j()}
       
         </div>)
 }
