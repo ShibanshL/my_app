@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Info from './Info';
+import Not from './Not';
 export default function New(props) {
     console.log(props)
 
@@ -54,6 +55,8 @@ export default function New(props) {
       
 
         <Info name='Whomi' data = {data} />
+
+        <Not name ='1'/>
         {/* {setTimeout(()=>{
             return(
                 <Info />
