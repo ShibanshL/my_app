@@ -56,7 +56,9 @@ export default function New(props) {
 
         <Info name='Whomi' data = {data} />
 
-        <Not data = {ndata}/>
+        <Not data1 = {ndata}/>
+
+        {console.log("baluee "+ndata)}
         {/* {setTimeout(()=>{
             return(
                 <Info />
