@@ -1,5 +1,5 @@
 import React from 'react';
-import New from './New';
+// import New from './New';
 export default function Info(props) {
   return( <div>
         {/* <div className='H1'>
