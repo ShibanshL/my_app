@@ -6,35 +6,25 @@ export default class Not extends Component {
         super(props)
         this.state = {
             in_data:'',
-            nd:props.data1
+            nd:0
         }
     }
 
-    async componentDidUpdate(pP, pS, sS){
-        console.log('check '+this.state.nd)
-
-        document.querySelector('.ch').innerHTML = this.state.nd
-        // if(this.props.data1<pP)
-        // { 
-        //     const url = 'https://www.boredapi.com/api/activity'
-        //     const response = await fetch(url)
-        //     const data = await response.json()
-        //     const item = data
-
-        // // console.log(item)
-        // // console.log(pS)
-
-        // this.setState({
-        //     in_data:item.activity
-        // })
+    // componentDidUpdate(){
+    //     this.setState({
+    //         nd:this.props.data1
+    //     })
     // }
-    }
 
   render() {
     return <div>
         {this.props.name}
         {this.state.in_data}
         <div className='ch'></div>
+
+        <h1>DATA : {this.props.data1}</h1>
+        <h1>nd : {this.state.nd}</h1>
+
     </div>;
   }
 }
