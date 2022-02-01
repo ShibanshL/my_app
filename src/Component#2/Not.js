@@ -10,7 +10,8 @@ export default class Not extends Component {
         }
     }
 
-    // componentDidUpdate(){
+    // componentDidUpdate(pr,pp,ss){
+    //   if(pr<pp)
     //     this.setState({
     //         nd:this.props.data1
     //     })
