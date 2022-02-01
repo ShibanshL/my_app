@@ -41,6 +41,7 @@ export default class Not extends Component {
         <div className='test'></div>
         <h1>DATA : {this.props.data1}</h1>
         <h1>nd : {()=>this.setState({nd:this.props.data1})}</h1><br></br>
+        {/* <h1>{this.state.nd}</h1> */}
         {/* <button onClick={()=>this.setState({nd:this.state.nd+1})}>ND Update</button> */}
 
     </div>;
