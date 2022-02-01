@@ -2,24 +2,21 @@ import React, { useState,useEffect } from 'react';
 
 export default function Alpha() {
     const [data, setData] = useState({"posts" : [
-        {
+        { 
           " name " : " Shibansh Sahoo ",
-          " email " : " sonu@gmail.com ",
-          " price " : " 457 ",
-          " materials ": " Actually i'm gonna have a limit ",
-          " paid ": true ,
-          " unpaid ": false ,
-          " id ": 3
-        } ,
-        {
+         
           " name ": " Pratichi Sahoo ",
-          " email ": " pratichi10@gmail.com ",
-          " price ": " 26 ",
-          " materials ": " " ,
-          " paid ": "" ,
-          " unpaid ": true ,
-          " id ": 4
-        } 
+          
+        },
+        // {
+        //   " name ": " Pratichi Sahoo ",
+        //   " email ": " pratichi10@gmail.com ",
+        //   " price ": " 26 ",
+        //   " materials ": " " ,
+        //   " paid ": "" ,
+        //   " unpaid ": true ,
+        //   " id ": 4
+        // }
     ]
     })
 
@@ -45,7 +42,7 @@ export default function Alpha() {
          {e.posts.name}
          </>
      })} */}
-
+hh
      {data.posts.map(e=>{return <>{e.name}</>})}
   </div>;
 }
