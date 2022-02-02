@@ -15,6 +15,7 @@ export default class C1 extends Component {
         const data = await response.json()
         const item = data.results
 
+        console.log(data)
         console.log(item)
 
         this.setState({
@@ -30,10 +31,10 @@ export default class C1 extends Component {
         {/* {this.state.data.results}<br></br> */}
 
 
-    T = {this.state.data.map(e=>{
+    {this.state.data.map(e=>{
             return(
             <>
-            {e.T}
+            T&nbsp;=&nbsp;{e.T}&nbsp;&nbsp;=&nbsp;{e.t}&nbsp;c&nbsp;=&nbsp;{e.c}&nbsp;h&nbsp;=&nbsp;{e.h}&nbsp;l&nbsp;=&nbsp;{e.l}&nbsp;n&nbsp;=&nbsp;{e.n}&nbsp;e&nbsp;=&nbsp;{e.e}&nbsp;v&nbsp;=&nbsp;{e.v}<br></br>
             </>)
         })}<br></br>
 
