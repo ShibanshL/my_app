@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 export default class C1 extends Component {
     constructor(){
         super()
@@ -37,6 +37,10 @@ export default class C1 extends Component {
             T&nbsp;=&nbsp;{e.T};&nbsp;&nbsp;=&nbsp;{e.t};&nbsp;c&nbsp;=&nbsp;{e.c};&nbsp;h&nbsp;=&nbsp;{e.h};&nbsp;l&nbsp;=&nbsp;{e.l};&nbsp;n&nbsp;=&nbsp;{e.n};&nbsp;e&nbsp;=&nbsp;{e.e};&nbsp;v&nbsp;=&nbsp;{e.v};<br></br>
             </>)
         })}<br></br>
+
+
+        <Link to='/New'>New</Link><br></br>
+        <Link to='/Not'>Not</Link><br></br>
 
 {/* {this.state.data.map(e=>{
     return<>
