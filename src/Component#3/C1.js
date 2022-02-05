@@ -10,6 +10,9 @@ export default class C1 extends Component {
 
 
    async componentDidMount(){
+
+    document.querySelector('.Hey').innerHTML='Loading' 
+
         const url = 'https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/2020-10-14?adjusted=true&apiKey=O6ZsUfA79Hc84eDrD3lkMLaPbtZDCbVX'
         const response = await fetch(url)
         const data = await response.json()
@@ -24,7 +27,7 @@ export default class C1 extends Component {
     }
 
   render() {
-    return <div>hi
+    return <div className='Hey'>
 
         {this.state.data.queryCount}<br></br>
 
