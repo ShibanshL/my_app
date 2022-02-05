@@ -24,6 +24,13 @@ export default class C1 extends Component {
         this.setState({
             data:item
         })
+    // document.querySelector('.Hey').innerHTML={this.state.data.map(e=>{
+    //     return(
+    //     <>
+    //     T&nbsp;=&nbsp;{e.T};&nbsp;&nbsp;=&nbsp;{e.t};&nbsp;c&nbsp;=&nbsp;{e.c};&nbsp;h&nbsp;=&nbsp;{e.h};&nbsp;l&nbsp;=&nbsp;{e.l};&nbsp;n&nbsp;=&nbsp;{e.n};&nbsp;e&nbsp;=&nbsp;{e.e};&nbsp;v&nbsp;=&nbsp;{e.v};<br></br>
+    //     </>)
+    // })}<br></br> 
+
     }
 
   render() {
