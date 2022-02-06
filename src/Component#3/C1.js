@@ -6,7 +6,7 @@ export default class C1 extends Component {
         super()
         this.state = {
             data:[],
-            Loading:(false)
+            Loading:false
         }
         this.Map = this.Map.bind(this)
     }

@@ -3,6 +3,7 @@ import './App.css';
 import New from './Component#2/New';
 import Not from './Component#2/Not';
 import C1 from './Component#3/C1';
+import NC1 from './Component#4/NC1'
 
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
@@ -31,6 +32,10 @@ function App() {
 
           <Route exact path='/C1' element={<C1></C1>}>
               {/* <C1 /> */}
+          </Route>
+
+          <Route exact path='/NC1' element={<NC1></NC1>}>
+              {/* <New /> */}
           </Route>
 
         </Routes>
