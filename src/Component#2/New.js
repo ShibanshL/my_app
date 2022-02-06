@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Info from './Info';
 import Not from './Not';
 import Alpha from './Alpha';
+import {Link } from 'react-router-dom';
 export default function New(props) {
     console.log(props)
 
@@ -67,5 +68,8 @@ export default function New(props) {
 
             )
         },2000)} */}
+        <Link to='/C1'>C1</Link><br></br>
+        <Link to='/Not'>Not</Link>
+
         </div>)
 }

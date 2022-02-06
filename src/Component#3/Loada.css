@@ -61,7 +61,7 @@ body {
 }
 
 .ball:nth-child(7) {
-	background: #000000;
+	background: #d87979;
 	-webkit-animation: right 1s infinite ease-in-out;
 	-moz-animation: right 1s infinite ease-in-out;
 	animation: right 1s infinite ease-in-out;

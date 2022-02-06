@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 export default class Not extends Component {
 
     constructor(props){
@@ -43,6 +43,9 @@ export default class Not extends Component {
         <h1>nd : {()=>this.setState({nd:this.props.data1})}</h1><br></br>
         {/* <h1>{this.state.nd}</h1> */}
         {/* <button onClick={()=>this.setState({nd:this.state.nd+1})}>ND Update</button> */}
+
+        <Link to='/New'>New</Link><br></br>
+        <Link to='/C1'>C1</Link>
 
     </div>;
   }
