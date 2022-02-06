@@ -4,7 +4,8 @@ export default class C1 extends Component {
     constructor(){
         super()
         this.state = {
-            data:[]
+            data:[],
+            Loading:(false)
         }
     }
 
@@ -25,6 +26,11 @@ export default class C1 extends Component {
         this.setState({
             data:item
         })
+        this.setState({
+            Loading:true
+        })
+
+
     // document.querySelector('.Hey').innerHTML={this.state.data.map(e=>{
     //     return(
     //     <>
@@ -60,6 +66,17 @@ export default class C1 extends Component {
         {e.results.t}
     </>
 })} */}
+
+{/* {
+    if(this.state.Loading==true){
+        console.log('hey')
+}
+else{
+
+}
+
+
+} */}
 
     </div>;
   }
