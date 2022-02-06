@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Loada from './Loada';
 export default class C1 extends Component {
     constructor(){
         super()
@@ -7,6 +8,7 @@ export default class C1 extends Component {
             data:[],
             Loading:(false)
         }
+        this.Map = this.Map.bind(this)
     }
 
 
@@ -40,6 +42,20 @@ export default class C1 extends Component {
 
     }
 
+    Map(){
+
+        return(
+        this.state.data.map((e, key)=>{
+            return(
+            <>
+            <div key={e.v}>
+            T&nbsp;=&nbsp;{e.T};&nbsp;&nbsp;=&nbsp;{e.t};&nbsp;c&nbsp;=&nbsp;{e.c};&nbsp;h&nbsp;=&nbsp;{e.h};&nbsp;l&nbsp;=&nbsp;{e.l};&nbsp;n&nbsp;=&nbsp;{e.n};&nbsp;e&nbsp;=&nbsp;{e.e};&nbsp;v&nbsp;=&nbsp;{e.v};<br></br>
+            </div>
+            </>)
+        }))
+        
+    }
+
   render() {
 
     const Loading =<h1>loaada</h1>
@@ -50,14 +66,15 @@ export default class C1 extends Component {
         {/* {this.state.data.results}<br></br> */}
 
 
-    {this.state.data.map(e=>{
+    {/* {this.state.data.map(e=>{
             return(
             <>
             T&nbsp;=&nbsp;{e.T};&nbsp;&nbsp;=&nbsp;{e.t};&nbsp;c&nbsp;=&nbsp;{e.c};&nbsp;h&nbsp;=&nbsp;{e.h};&nbsp;l&nbsp;=&nbsp;{e.l};&nbsp;n&nbsp;=&nbsp;{e.n};&nbsp;e&nbsp;=&nbsp;{e.e};&nbsp;v&nbsp;=&nbsp;{e.v};<br></br>
             </>)
-        })||Loading}<br></br>
+        })||Loading}<br></br> */}
 
-
+{Loading?this.Map():<Loada />}
+{/* {this.Map()} */}
         <Link to='/New'>New</Link><br></br>
         <Link to='/Not'>Not</Link><br></br>
 
