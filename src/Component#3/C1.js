@@ -73,7 +73,7 @@ export default class C1 extends Component {
             </>)
         })||Loading}<br></br> */}
 
-{Loading?this.Map():<Loada />}
+{Loading?this.Map():<><h1>Loading asshole</h1></>}
 {/* {this.Map()} */}
         <Link to='/New'>New</Link><br></br>
         <Link to='/Not'>Not</Link><br></br>
