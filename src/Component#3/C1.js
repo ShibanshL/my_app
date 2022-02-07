@@ -6,7 +6,10 @@ export default class C1 extends Component {
         super()
         this.state = {
             data:[],
-            Loading:false
+            Poet:[],
+            Loading:false,
+            C_page:1,
+            P_page:10
         }
         this.Map = this.Map.bind(this)
     }
@@ -53,10 +56,19 @@ export default class C1 extends Component {
             </div>
             </>)
         }))
+
         
     }
 
+
   render() {
+    const indexOfLP_page = this.state.C_page*this.state.P_page
+    const indexOfFP_page = indexOfLP_page - this.state.P_page
+    const c_Post = this.state.data.slice(indexOfFP_page, indexOfLP_page)
+    console.log(c_Post)
+    this.setState({
+        Post:c_Post
+    })
 
     const Loading =<h1>loaada</h1>
     return <div className='Hey'>
@@ -76,7 +88,14 @@ export default class C1 extends Component {
 <Link to='/New'>New</Link><br></br>
         <Link to='/Not'>Not</Link><br></br>
 
-{Loading?this.Map():<Loada/>}
+{/* {Loading?this.Map():<Loada/>} */}
+{this.state.Post.map(e=>{
+    return(
+        <>
+        {e.T}
+        </>
+    )
+})}
 {/* {this.Map()} */}
         
 
