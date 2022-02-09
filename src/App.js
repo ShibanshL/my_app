@@ -23,7 +23,7 @@ function App() {
 
 
 
-          <Route exact path='/New' element={<New></New>}>
+          <Route exact path='/New/:id' element={<New></New>}>
               {/* <New /> */}
           </Route>
 

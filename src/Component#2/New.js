@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Info from './Info';
 import Not from './Not';
 import Alpha from './Alpha';
-import {Link } from 'react-router-dom';
+import {Link, useParams } from 'react-router-dom';
 export default function New(props) {
     console.log(props)
 
@@ -10,7 +10,7 @@ export default function New(props) {
     const [data1, setData1] = useState('')
     const [ndata, setNdata] = useState(0)
 
-   
+   const {id} = useParams()
 
     useEffect(async ()=>{
         const url ='https://catfact.ninja/fact'
@@ -68,6 +68,7 @@ export default function New(props) {
 
             )
         },2000)} */}
+        <h1>Params : {id}</h1>
         <Link to='/C1'>C1</Link><br></br>
         <Link to='/Not'>Not</Link>
 
