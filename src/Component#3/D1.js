@@ -12,7 +12,7 @@ export default function D1() {
     const nav = useNavigate()
   return <div>
       Just some randome stuff - {name}
-
+      <img src='/Images/382650,xcitefun-philippines-tour-1.jpg' />
       <button onClick={()=>{
         nav('/New'+'/'+name)
       }}>CLick to go to C1</button>
