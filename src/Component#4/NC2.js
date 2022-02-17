@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './NC2.css'
 export default class NC2 extends Component {
     constructor(){
         super()
         this.state ={
-            data:[]
+            data:[],
+            check:[]
         }
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick(){
+        console.log('ok')
     }
 
     async componentDidMount(){
@@ -19,17 +26,22 @@ export default class NC2 extends Component {
 
         // console.log(data)
         this.setState({data:data.entries})
+
+        this.setState({check:data.entries[0]})
     }
   render() {
       console.log(this.state.data)
     return (
       <div>NC2<br/><hr/>
+      <h3>
+          {this.state.check.API}
+      </h3>
 
       <h2 className='Try'>
           {this.state.data.map(e =>{
               return(
-                  <div className='Try2'>
-                  {e.Link}
+                  <div onClick={this.handleClick()} className='Try2'>
+                      <Link to='/NC3/'>{e.Link}</Link>                  
                   </div>
               )
           })}
