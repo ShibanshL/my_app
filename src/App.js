@@ -5,7 +5,7 @@ import Not from './Component#2/Not';
 import C1 from './Component#3/C1';
 import NC1 from './Component#4/NC1'
 import D1 from './Component#3/D1';
-
+import NC2 from './Component#4/NC2';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
   return (
@@ -40,6 +40,10 @@ function App() {
           </Route>
 
           <Route exact path="/D1/:name" element={<D1></D1>}>
+              {/* <New /> */}
+          </Route>
+
+          <Route exact path="/NC2" element={<NC2></NC2>}>
               {/* <New /> */}
           </Route>
 
