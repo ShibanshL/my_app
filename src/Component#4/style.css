@@ -33,7 +33,6 @@
     align-items: center;
     justify-content: space-evenly;
     font-size: 10px;
-    /* background-color: pink; */
 }
 .description{
     grid-area:'description';

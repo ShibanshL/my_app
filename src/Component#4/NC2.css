@@ -1,18 +1,15 @@
 *{
     margin: 0;
-    padding: 0;
+    /* padding: 20px; */
     box-sizing: border-box;
     max-width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
 }
-
-.Try{
-    background: pink;
-}
-.Try2{
-    padding: 10px 30px;
-    background: cyan;
-    border: 5px solid white;
-    display: grid;
-    /* grid-template-columns: 100%;
-    grid-template-rows: 50% 50%; */
+div{
+    /* padding: 50px; */
+    margin: 10px;
 }
