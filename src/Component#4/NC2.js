@@ -18,7 +18,7 @@ export default class NC2 extends Component {
 
     }
 
-    
+    // componentWillReceiveProps(){}
 
     async componentDidUpdate(){
         const url = 'https://api.publicapis.org/entries'
