@@ -20,7 +20,7 @@ export default class NC2 extends Component {
 
     
 
-    async componentDidMount(){
+    async componentDidUpdate(){
         const url = 'https://api.publicapis.org/entries'
         const res = await fetch(url)
         const data = await res.json()
