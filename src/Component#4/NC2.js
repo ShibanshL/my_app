@@ -18,16 +18,7 @@ export default class NC2 extends Component {
 
     }
 
-    pagenm(){
-        const ilPage= this.state.cPage*this.state.pPage
-        const ifPage = ilPage - this.state.pPage
-        const currentPost = this.state.data.slice(ifPage, ilPage)
-        this.setState({
-            pageData:currentPost
-        })
-  
-        console.log(this.state.pageData)
-    }
+    
 
     async componentDidMount(){
         const url = 'https://api.publicapis.org/entries'
@@ -45,8 +36,22 @@ export default class NC2 extends Component {
             cPage:pi
         })
 
-        console.log(this.state.cPage+'hh')
+        // console.log(this.state.cPage+'hh')
     }
+    
+    pagenm(){
+        const ilPage= this.state.cPage*this.state.pPage
+        const ifPage = ilPage - this.state.pPage
+        const currentPost = this.state.data.slice(ifPage, ilPage)
+        this.setState({
+            pageData:currentPost
+        })
+        // console.log('curent page')
+        // console.log(this.state.cPage)
+
+        // console.log(this.state.pageData)
+    }
+
     
   render() {
      
@@ -62,7 +67,7 @@ export default class NC2 extends Component {
           })}
 
           {/* <NC4_card info={this.state.pageData} /> */}
-          <Pagination postsperpage={this.state.pPage} totalpost={this.state.data.length} paginate={this.paginate} />
+          <Pagination postsperpage={this.state.pPage} totalpost={this.state.data.length} paginate={this.paginate} cp = {this.state.cPage}/>
 
           <h1>{this.state.cPage}</h1>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './paginate.css'
-function Pagination({postsperpage, totalpost, paginate}) {
+function Pagination({postsperpage, totalpost, paginate,cp}) {
     const pagenumber =[]
     console.log(postsperpage)
     for(let i=0; i<=Math.ceil(totalpost/postsperpage); i++){
@@ -11,7 +11,10 @@ function Pagination({postsperpage, totalpost, paginate}) {
        { pagenumber.map(e=>{
            return(
                <div className='lower_sub'>
-                   <a href='#' onClick={()=>paginate(e)}>
+                   <a href='#' onClick={()=>{
+                       console.log('inside this')
+                       console.log(cp)
+                       paginate(e)}}>
                        {e}
                    </a>
                </div>
