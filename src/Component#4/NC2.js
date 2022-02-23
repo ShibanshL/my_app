@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-// import { Link, NavLink } from 'react-router-dom'
 import './NC2.css'
 import NC4_card from './NC4_cards'
-// import NC3 from './NC3'
+import Pagination from './Pagination'
+
 export default class NC2 extends Component {
    
     constructor(){
@@ -53,7 +53,7 @@ export default class NC2 extends Component {
           })}
 
           {/* <NC4_card info={this.state.pageData} /> */}
-
+          <Pagination postsperpage={this.state.pPage} totalpost={this.state.data.length} />
       </div>
     )
   }
