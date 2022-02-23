@@ -8,11 +8,11 @@ function Pagination({postsperpage, totalpost, paginate}) {
     }
   return (
     <div className='lower'>
-       { pagenumber.map(i=>{
+       { pagenumber.map(e=>{
            return(
                <div className='lower_sub'>
-                   <a href='#' onClick={()=>paginate(i)}>
-                       {i}
+                   <a href='#' onClick={()=>paginate(e)}>
+                       {e}
                    </a>
                </div>
            )

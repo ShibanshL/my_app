@@ -37,6 +37,7 @@ export default class NC2 extends Component {
         console.log(data)
         this.setState({data:data.entries})
         this.pagenm()
+        // this.paginate()
     }
     
     paginate(pi){
@@ -62,6 +63,8 @@ export default class NC2 extends Component {
 
           {/* <NC4_card info={this.state.pageData} /> */}
           <Pagination postsperpage={this.state.pPage} totalpost={this.state.data.length} paginate={this.paginate} />
+
+          <h1>{this.state.cPage}</h1>
       </div>
     )
   }
