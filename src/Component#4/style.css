@@ -1,0 +1,44 @@
+
+
+.Main{
+    height:300px;
+    width:400px;
+    background:cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+}
+.Main .Sub{
+    height:100%;
+    width:100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 33% 17% 50%;
+    grid-template-columns: 100%;
+    grid-template-areas: 'title'
+                        'property'
+                        'description';
+}
+.title{
+    grid-area:'title';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60px;
+}
+.property{
+    grid-area:'property';
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 10px;
+    /* background-color: pink; */
+}
+.description{
+    grid-area:'description';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}

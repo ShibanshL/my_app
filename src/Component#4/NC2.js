@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+// import { Link, NavLink } from 'react-router-dom'
 // import './NC2.css'
-import NC3 from './NC3'
+// import NC3 from './NC3'
 export default class NC2 extends Component {
    
     constructor(){
@@ -26,7 +26,7 @@ export default class NC2 extends Component {
     return (
       <div>
 
-          
+
       </div>
     )
   }

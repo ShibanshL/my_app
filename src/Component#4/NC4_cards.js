@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
-
-export default class NC4_cards extends Component {
+import './style.css'
+export default class NC4_card extends Component {
   render() {
     return (
       <div className='Main'>
           <div className='Sub'>
-            <div>Properties</div>
+            <div className='title'>API</div>
+            <div className='property'>
+              <h2>Auth</h2>
+              <h2>Catagories</h2>
+            </div>
+            <div className='description'>lorem30</div>
+
           </div>
       </div>
     )
