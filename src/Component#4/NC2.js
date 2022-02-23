@@ -9,11 +9,24 @@ export default class NC2 extends Component {
         super()
         this.state ={
             data:[],
-            check:[]
+            cPage:1,
+            pPage:10,
+            pageData:[]
         }
+        this.pagenm = this.pagenm.bind(this)
     }
 
+    pagenm(){
+        const ilPage= this.state.cPage*this.state.pPage
+        const ifPage = ilPage - this.state.pPage
+        const currentPost = this.state.data.slice(ifPage, ilPage)
+        this.setState({
+            pageData:currentPost
+        })
   
+        console.log(this.state.pageData)
+    }
+
     async componentDidMount(){
         const url = 'https://api.publicapis.org/entries'
         const res = await fetch(url)
@@ -21,18 +34,25 @@ export default class NC2 extends Component {
 
         console.log(data)
         this.setState({data:data.entries})
-
+        this.pagenm()
     }
+    
+    
+    
   render() {
+     
+    //   console.log(currentPost)
     return (
       <div>
-          {this.state.data.map(e =>{
+          {this.state.pageData.map(e =>{
               return(
                   <>
                     <NC4_card info={e} />
                   </>
               )
           })}
+
+          {/* <NC4_card info={this.state.pageData} /> */}
 
       </div>
     )

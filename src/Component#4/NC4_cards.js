@@ -8,6 +8,8 @@ export default class NC4_card extends Component {
     }
   }
   render() {
+
+    console.log(this.state.data)
     return (
       <div className='Main'>
           <div className='Sub'>
