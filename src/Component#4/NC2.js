@@ -14,6 +14,8 @@ export default class NC2 extends Component {
             pageData:[]
         }
         this.pagenm = this.pagenm.bind(this)
+        this.paginate = this.paginate.bind(this)
+
     }
 
     pagenm(){
@@ -37,7 +39,13 @@ export default class NC2 extends Component {
         this.pagenm()
     }
     
-    
+    paginate(pi){
+        this.setState({
+            cPage:pi
+        })
+
+        console.log(this.state.cPage+'hh')
+    }
     
   render() {
      
@@ -53,7 +61,7 @@ export default class NC2 extends Component {
           })}
 
           {/* <NC4_card info={this.state.pageData} /> */}
-          <Pagination postsperpage={this.state.pPage} totalpost={this.state.data.length} />
+          <Pagination postsperpage={this.state.pPage} totalpost={this.state.data.length} paginate={this.paginate} />
       </div>
     )
   }
