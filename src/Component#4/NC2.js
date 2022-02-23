@@ -9,8 +9,8 @@ export default class NC2 extends Component {
         super()
         this.state ={
             data:[],
-            cPage:1,
-            pPage:10,
+            cPage:3,
+            pPage:9,
             pageData:[]
         }
         this.pagenm = this.pagenm.bind(this)
