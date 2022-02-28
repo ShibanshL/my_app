@@ -48,7 +48,7 @@ export default class NC2 extends Component {
         })
         // console.log('curent page')
         // console.log(this.state.cPage)
-        console.log('ehy')
+        // console.log('ehy')
         // console.log(this.state.pageData)
     }
 
